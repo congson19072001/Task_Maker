@@ -1,3 +1,4 @@
 Back-end/*.env
 Back-end/*.json
+Back-end/vendor/
 Front-end/node_modules/
