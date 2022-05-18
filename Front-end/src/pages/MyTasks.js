@@ -60,7 +60,7 @@ const MyTasks = () => {
             redirect: 'follow'
         };
 
-        const response = await fetch(process.env.BACKEND_URL + "/task/list", requestOptions)
+        const response = await fetch("https://task-maker-1907.herokuapp.com" + "/task/list", requestOptions)
         const data = await response.json()
         return data
     }
@@ -73,7 +73,7 @@ const MyTasks = () => {
             headers: myHeaders,
             redirect: 'follow'
         };
-    fetch(`${process.env.BACKEND_URL}/task/${id}`,requestOptions )
+    fetch(`https://task-maker-1907.herokuapp.com/task/${id}`,requestOptions )
     .then(response => response.json())
     .then(result => {
         console.log(result)
@@ -100,7 +100,7 @@ const MyTasks = () => {
                 + "T" + ("0" + tomorrow.getHours()).slice(-2) + ("0" + tomorrow.getMinutes()).slice(-2) + "05").toString(),
             })
         };
-        fetch(process.env.BACKEND_URL + "/task/create", requestOptions)
+        fetch("https://task-maker-1907.herokuapp.com" + "/task/create", requestOptions)
         .then(response => response.json())
         .then(result => {
             console.log(result)

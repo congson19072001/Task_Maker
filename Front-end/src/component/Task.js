@@ -78,7 +78,7 @@ export class Task extends Component {
         body: raw,
         redirect: 'follow'
       };
-      fetch(process.env.BACKEND_URL + "/task/"+this.state.task_id, requestOptions)
+      fetch("https://task-maker-1907.herokuapp.com" + "/task/"+this.state.task_id, requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)
@@ -107,7 +107,7 @@ export class Task extends Component {
         body: raw,
         redirect: 'follow'
       };
-      fetch(process.env.BACKEND_URL + "/task/"+this.state.task_id + "/check", requestOptions)
+      fetch("https://task-maker-1907.herokuapp.com" + "/task/"+this.state.task_id + "/check", requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result)

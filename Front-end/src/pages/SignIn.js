@@ -21,7 +21,7 @@ const SignIn = () => {
             Email: values.email,
             Password: values.password
         }
-        const res = await fetch(process.env.BACKEND_URL + '/user/login', {
+        const res = await fetch("https://task-maker-1907.herokuapp.com" + '/user/login', {
         method: 'POST',
         headers: {
         'Content-type': 'application/json',

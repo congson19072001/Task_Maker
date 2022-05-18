@@ -23,7 +23,7 @@ const SignUp = () => {
             Password: values.password,
             Name: values.name
         }
-        const res = await fetch(process.env.BACKEND_URL +'/user/signup', {
+        const res = await fetch("https://task-maker-1907.herokuapp.com" +'/user/signup', {
         method: 'POST',
         headers: {
         'Content-type': 'application/json',
