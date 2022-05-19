@@ -20,14 +20,17 @@ var Fapp *firebase.App
 
 func Initial() {
 	//opt := option.WithCredentialsFile("demoshopweb-84712-firebase.json")
-	if config.FIREBASE_AUTH != "none" {
-		rawDecodedText, _ := base64.StdEncoding.DecodeString(config.FIREBASE_AUTH)
-		opt := option.WithCredentialsJSON([]byte(rawDecodedText))
-		Fapp, err = firebase.NewApp(context.Background(), nil, opt)
-	} else {
-		opt := option.WithCredentialsFile("demoshopweb-84712-firebase.json")
-		Fapp, err = firebase.NewApp(context.Background(), nil, opt)
-	}
+	// if config.FIREBASE_AUTH != "" {
+	// 	rawDecodedText, _ := base64.StdEncoding.DecodeString(config.FIREBASE_AUTH)
+	// 	opt := option.WithCredentialsJSON([]byte(rawDecodedText))
+	// 	Fapp, err = firebase.NewApp(context.Background(), nil, opt)
+	// } else {
+	// 	opt := option.WithCredentialsFile("demoshopweb-84712-firebase.json")
+	// 	Fapp, err = firebase.NewApp(context.Background(), nil, opt)
+	// }
+	rawDecodedText, _ := base64.StdEncoding.DecodeString(config.FIREBASE_AUTH)
+	opt := option.WithCredentialsJSON([]byte(rawDecodedText))
+	Fapp, err = firebase.NewApp(context.Background(), nil, opt)
 	if err != nil {
 		log.Fatalln("Error initializing app:", err)
 	}

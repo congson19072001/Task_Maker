@@ -10,6 +10,7 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/go-playground/validator/v10 v10.7.0
 	github.com/gofiber/fiber/v2 v2.14.0
+	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.13.1 // indirect
 	github.com/valyala/fasthttp v1.28.0 // indirect
 	golang.org/x/crypto v0.0.0-20210616213533-5ff15b29337e
