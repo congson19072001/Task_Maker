@@ -13,9 +13,11 @@ var (
 	// TOKENKEY returns the jwt token secret
 	TOKENKEY = getEnv("TOKEN_KEY", "laksdjflkasjfwj92jfslj2qu0-9apsoifjk")
 	// TOKENEXP returns the jwt token expiration duration.
+
 	// Should be time.ParseDuration string. Source: https://golang.org/pkg/time/#ParseDuration
 	// default: 10h
-	TOKENEXP = getEnv("TOKEN_EXP", "10h")
+	TOKENEXP      = getEnv("TOKEN_EXP", "10h")
+	FIREBASE_AUTH = getEnv("FIREBASE_AUTH", "none")
 )
 
 func getEnv(name string, fallback string) string {
